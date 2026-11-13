@@ -10,7 +10,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if viewModel.saved {
-                       Text("Saved successfully!")
+                       Text("保存成功！")
                            .padding()
                            .background(Color.green)
                            .cornerRadius(8)
@@ -24,7 +24,7 @@ struct ContentView: View {
                 }) {
                     HStack {
                         Image(systemName: "video.fill")
-                        Text("Pick Video")
+                        Text("选视频")
                     }
                 }
                 .sheet(isPresented: $viewModel.showVideoPicker) {
@@ -37,7 +37,7 @@ struct ContentView: View {
                 }) {
                     HStack {
                         Image(systemName: "photo.fill")
-                        Text("Pick Image")
+                        Text("选图片")
                     }
                 }
                 .sheet(isPresented: $viewModel.showImagePicker) {
@@ -75,7 +75,7 @@ struct ContentView: View {
                         Image(systemName: "square.and.arrow.down")
                             .font(.largeTitle)
                             .foregroundColor(.blue)
-                        Text("Save")
+                        Text("保存")
                     }
                 }
             }
